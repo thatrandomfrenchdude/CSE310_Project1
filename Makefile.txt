@@ -1,0 +1,14 @@
+run	:main.o foreignsub.o
+	g++ -o proj1  main.o foreignsub.o
+
+main.o	:main.cpp foreignsub.h
+	g++ -c main.cpp
+
+foreignsub.o	:foreignsub.cpp foreignsub.h
+	g++ -c foreignsub.cpp
+
+clean	:
+	rm *.o 
+
+cleanAll	:
+	rm *.o proj1
